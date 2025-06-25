@@ -1,0 +1,279 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Fondo claro y relajante */
+    color: #333;
+  }
+  
+  /* Encabezado */
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1e88e5, #1565c0); /* Degradado en tonos azules */
+    color: white;
+  }
+  
+  .bnv {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .subtitulo {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+  }
+  
+  /* Sección sobre nosotros */
+  .sobre-nosotros {
+    padding: 80px 20px;
+    background-color: white;
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1e88e5; /* Color azul */
+    position: relative;
+  }
+  
+  .titulo::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #1565c0; /* Línea decorativa azul oscuro */
+  }
+  
+  .contenedor-sobre-nosotros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start; /* Alinea los elementos en la parte superior */
+  }
+  
+  .mapa-container {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contenido-textos {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  
+  .texto-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: #e3f2fd; /* Fondo azul claro */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .texto-item:hover {
+    transform: translateY(-5px); /* Efecto de levitación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icono {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #1e88e5; /* Color azul */
+    flex-shrink: 0; /* Evita que el ícono se reduzca */
+  }
+  
+  .texto-contenido {
+    flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  }
+  
+  .texto-contenido h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1565c0; /* Color azul oscuro */
+  }
+  
+  .texto-contenido p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+  }
+  
+  /* Sección de redes sociales */
+  .redes-sociales {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff; /* Color azul oscuro */
+  }
+  
+  .redes-sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px; /* Más espacio entre los iconos */
+    display: inline-block; /* Para aplicar transformaciones */
+  }
+  
+  .icono {
+    font-size: 3rem; /* Iconos más grandes */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transiciones suaves */
+  }
+  
+  .redes-sociales a:hover .icono {
+    color: #1e88e5; /* Cambia el color al hacer hover */
+    transform: scale(1.2) rotate(15deg); /* Agranda y gira ligeramente el icono */
+  }
+  
+  
+  
+  /* Sección de metas */
+  .about-services {
+    padding: 80px 20px;
+    background-color: #f0f8ff; /* Fondo claro y relajante */
+  }
+  
+  .servicio-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .servicio-ind {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .servicio-ind:hover {
+    transform: translateY(-10px); /* Efecto de levitación */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .servicio-ind .icono {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #1e88e5; /* Color azul */
+    transition: transform 0.3s ease;
+  }
+  
+  .servicio-ind:hover .icono {
+    transform: rotate(360deg); /* Animación de giro */
+  }
+  
+  .servicio-ind h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #1565c0; /* Color azul oscuro */
+  }
+  
+  .servicio-ind p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  /* Sección de testimonios */
+  .testimonios {
+    padding: 80px 20px;
+    background-color: white;
+  }
+  
+  .testimonios-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .testimonio {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #e3f2fd; /* Fondo azul claro */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonio:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonio p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .testimonio span {
+    font-size: 0.9rem;
+    color: #1e88e5; /* Color azul */
+    font-weight: bold;
+  }
+  
+  /* Pie de página */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1565c0; /* Fondo azul oscuro */
+    color: white;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sobre-nosotros, .about-services, .testimonios {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+
+  /*responsivo*/
+
+  @media (max-width: 768px) {
+  .contenedor-sobre-nosotros, .servicio-cont, .testimonios-grid, .galeria-grid, .blog-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario-suscripcion {
+    flex-direction: column;
+  }
+
+  .formulario-suscripcion button {
+    width: 100%;
+  }
+}

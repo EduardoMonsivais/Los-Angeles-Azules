@@ -1,0 +1,165 @@
+/* Estilos generales del contenedor del formulario */
+.formulario-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.formulario-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del título */
+.formulario-container h1 {
+  text-align: center;
+  color: #1e3c72; /* Azul oscuro */
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Estilos del formulario */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Estilos de cada grupo de campos */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #1e3c72; /* Azul oscuro */
+  font-size: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-size: 16px;
+  color: #333333;
+  background-color: #f9f9f9; /* Fondo gris claro */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff; /* Azul brillante */
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.2);
+  outline: none;
+  background-color: #ffffff; /* Fondo blanco */
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Estilos del botón de enviar */
+.submit-button {
+  background-color: #007bff; /* Azul brillante */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Azul más oscuro */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.submit-button:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilos del enlace para volver a Home */
+.volver-link {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  color: #1e3c72; /* Azul oscuro */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.volver-link:hover {
+  color: #007bff; /* Azul brillante */
+  text-decoration: underline;
+}
+
+/* Efecto de carga en el botón (opcional) */
+@keyframes buttonLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.submit-button.loading {
+  position: relative;
+  pointer-events: none;
+  background-color: #0056b3; /* Azul más oscuro */
+}
+
+.submit-button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border: 2px solid #ffffff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: buttonLoading 0.8s linear infinite;
+}
